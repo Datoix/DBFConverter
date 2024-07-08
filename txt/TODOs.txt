@@ -1,0 +1,3 @@
+- Pointer saving stack (!!!)
+- Conditions returning expression
+- Automatically replace big numbers with multiplication (Add, Move)

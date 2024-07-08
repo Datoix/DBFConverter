@@ -1,0 +1,24 @@
+var compiler = new BFCompiler();
+
+compiler.Execute(bf => {
+	var a = bf.Var(5);
+	var str = bf.Var("fdf");
+
+	a.Value = 3;
+
+	bf.Print(a); // bf.Expression abstract
+	bf.For(bf.Range(1, 5, 2), () => {
+
+	});
+
+	var myFunc = bf.Function((a, b, c) => {
+		bf.Print(a);
+	});
+
+	bf.Condition(a > bf, () => bf.Print("true"), () => bf.Print("false"));
+
+
+	myFunc.Invoke();
+});
+
+Console.WriteLine(bf.Output);
